@@ -1,0 +1,79 @@
+#include <stdio.h>
+int main(){
+    
+char estado1, estado2;
+char codigo1 [4], codigo2 [4];
+char nomeCidade1[50], nomeCidade2[50];
+int populacao1, populacao2;
+float area1, area2 , pib1, pib2;
+int pontos1, pontos2;
+
+// Inserir dados da primeira carta
+
+printf("Digite os dados da primera carta:\n");
+
+printf ("Estado (A-H): ");
+scanf ("%c", &estado1);
+
+printf ("Código da carta:");
+scanf ("%s", codigo1);
+
+printf("Nome da Cidade:");
+scanf (" %c[^\n]", nomeCidade1);
+
+printf ("População:");
+scanf ("%d", &populacao1);
+
+printf ("Área (em km²): ");
+scanf ("%f", &area1);
+
+printf ("PIB (em bilões de reais): ");
+scanf ("%f", &pib1);
+
+printf ("Número de pontos Turísticos:" );
+scanf("%d", &pontos1);
+
+// Inserir dados da segunda carta
+    
+printf("Digite os dados da segunda carta:\n");
+    
+printf("Estado (A-H): ");
+scanf(" %c", estado2);
+
+printf("Código da carta: ");
+scanf("%s", codigo2);
+
+printf("Nome da Cidade: ");
+scanf(" %[^\n]", nomeCidade2);
+
+printf("População: ");
+scanf("%d", &populacao2);
+
+printf("Área (em km²): ");
+scanf("%f", &area2);
+
+printf("PIB (em bilhões de reais): ");
+scanf("%f", &pib2);
+
+printf("Número de pontos Turísticos: ");
+scanf("%d", &pontos2);
+
+// Cálculo de densidade populacional e PIB per capita.
+
+float densidade1 = populacao1 / area1;
+float densidade2 = populacao2 / area2;
+float PIBpercapita1 = pib1 / populacao1;
+float PIBpercapita2 = pib2 / populacao2;
+
+printf("Densidade Populacional 1: %.2f\n", densidade1);
+printf("Densidade Populacional 2: %.2f\n", densidade2);
+
+printf("PIB per capita 1: %.2f\n", PIBpercapita1);
+printf("PIB per capita 2: %.2f\n", PIBpercapita2);
+
+
+
+return 0;
+
+
+}
